@@ -62,3 +62,8 @@ alert('Pero si puedes cambiar el valor, yo soy id :2');
     Por ejemplo, puedes agregar nuevas propiedades a un objeto JavaScript en cualquier momento, lo que lo hace dinámico y 
     flexible en la manipulación de datos y comportamientos.
  */
+
+    /**      PREGUNTAS        
+     * ¿Qué es el dinamismo en OOP?
+    */
+    
