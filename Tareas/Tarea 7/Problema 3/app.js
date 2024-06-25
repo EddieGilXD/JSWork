@@ -20,6 +20,6 @@ console.log(punto1);
 console.log(punto2);
 
 sumarPuntos.apply(punto1, [punto1.x, punto2.x]);
-punto1.sumar();
+
 console.log(punto1)
 
