@@ -5,7 +5,8 @@ class User {
         this.surname = surname;
         this.email = email;
         this.role = role;
-        this.courses = [];        
+        this.courses = {};
+        this.message = [];
     }
 
     addCourse(course, level){        
@@ -17,6 +18,13 @@ class User {
             delete this.courses[course];            
         } else {console.log("Error no hay curso a eliminar");}        
     }
+
+    editCourse(course, level) {
+        this.courses[course] = level;        
+    }
+
+    
+
     
 }
 
@@ -25,7 +33,11 @@ console.log(user1.name, user1.surname, user1.email, user1.role);
 
 user1.addCourse("Matematicas", 3);
 console.log(user1.courses);
+console.log(user1);
 
 user1.removeCourse("Matematicas");
+console.log(user1);
+
+user1.editCourse("Sociales", 7);
 console.log(user1);
 
