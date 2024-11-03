@@ -6,7 +6,7 @@ class User {
         this.email = email;
         this.role = role;
         this.courses = {};
-        this.message = [];
+        this.messages = [];
     }
 
     addCourse(course, level){        
@@ -22,10 +22,22 @@ class User {
     editCourse(course, level) {
         this.courses[course] = level;        
     }
-
     
-
+    sendMessage(from, to, message){
+        let sendEmail = {
+            from: from,
+            to: to,
+            message: message
+        }  
+        
+        this.messages.push(sendEmail);
+    }
     
+    showMessageHistory(){
+        this.messages.forEach(function(msg) {
+            console.log(msg);
+        });
+    }
 }
 
 let user1 = new User ("Pablo", "Flores", "test@test.com", "Maestro");
@@ -41,3 +53,10 @@ console.log(user1);
 user1.editCourse("Sociales", 7);
 console.log(user1);
 
+user1.sendMessage("Profesor", "Estudiante", "Esto es un mensaje");
+user1.sendMessage("Director", "Estudiante", "Este es otro mensaje");
+user1.sendMessage("Estudiante", "Estudiante", "Pasame copia del examen");
+
+user1.showMessageHistory();
+
+/*Tarea terminada*/
